@@ -76,10 +76,10 @@ main {
 
 .clock-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Responsive grid */
-    gap: 100px; /* Reduced gap for better fit */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 50px; /* Reduced gap for better fit */
     justify-items: center;
-    padding: 100px;
+    padding: 50px;
 }
 
 .clock-box {
