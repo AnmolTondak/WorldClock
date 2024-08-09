@@ -9,15 +9,9 @@ body {
 }
 
 header {
-     background-color: #007BFF;
+    background-color: #007BFF;
     color: white;
-    padding: 20px 10px; /* Adjusted padding to accommodate the search bar */
-    position: fixed; /* Make the header fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Ensure header stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    padding: 20px 0;
 }
 
 h1 {
@@ -29,35 +23,20 @@ h2 {
     font-size: 2em;
     color: #007BFF;
 }
-/* Search Bar */
-#search-bar {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    max-width: 90%;
-    font-size: 1em;
-	
-}
 
 /* Main layout */
 main {
-    padding: 100px;
+    padding: 20px;
 }
 
 /* Primary Time (India) */
 #primary-time {
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     padding: 20px;
     background-color: #ffffff; /* White background for primary box */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
     max-width: 600px;
-    margin: 0 auto;
 }
 
 .primary-clock {
@@ -80,7 +59,7 @@ main {
 .clock-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 80px;
+    gap: 20px; /* Adjusted gap for better spacing */
     justify-items: center;
     padding: 20px;
 }
@@ -93,7 +72,6 @@ main {
     text-align: center;
     width: 100%;
     max-width: 250px;
-    display: inline-block; /* Ensure boxes are displayed properly */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -123,13 +101,13 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .primary-clock {
         font-size: 2.5em;
     }
 
     .clock-box {
-        max-width: 100%;
+        max-width: 90%; /* Adjusted for better fit on smaller screens */
         padding: 15px;
     }
 
@@ -139,5 +117,28 @@ footer {
 
     .clock-box div {
         font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .primary-clock {
+        font-size: 2em;
+    }
+
+    .clock-box {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .clock-box h3 {
+        font-size: 0.9em;
+    }
+
+    .clock-box div {
+        font-size: 1em;
     }
 }
