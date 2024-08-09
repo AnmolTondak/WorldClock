@@ -76,7 +76,7 @@ main {
 
 .clock-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Responsive grid */
     gap: 50px; /* Reduced gap for better fit */
     justify-items: center;
     padding: 50px;
