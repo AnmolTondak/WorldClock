@@ -79,7 +79,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     gap: 50px; /* Reduced gap for better fit */
     justify-items: center;
-    padding: 50px;
+    padding: 20px;
 }
 
 .clock-box {
