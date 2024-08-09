@@ -11,36 +11,51 @@ body {
 header {
     background-color: #007BFF;
     color: white;
-    padding: 20px 0;
+    padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
     margin: 0;
+    font-size: 1.5em; /* Adjusted for better scaling */
 }
 
-h2 {
-    margin: 20px 0;
-    font-size: 2em;
-    color: #007BFF;
+/* Search Bar */
+#search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    max-width: 100%; /* Adjusted for better responsiveness */
+    font-size: 1em;
 }
 
 /* Main layout */
 main {
-    padding: 20px;
+    padding: 80px 20px 20px; /* Adjusted padding for fixed header */
 }
 
 /* Primary Time (India) */
 #primary-time {
     margin: 0 auto 40px;
     padding: 20px;
-    background-color: #ffffff; /* White background for primary box */
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
-    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 90%; /* Adjusted for responsiveness */
 }
 
 .primary-clock {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjusted for better readability */
     margin-top: 20px;
     color: #007BFF;
     font-weight: bold;
@@ -58,20 +73,19 @@ main {
 
 .clock-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px; /* Adjusted gap for better spacing */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for better responsiveness */
+    gap: 20px; /* Reduced gap for better fit */
     justify-items: center;
-    padding: 20px;
 }
 
 .clock-box {
-    background-color: #f0f0f0; /* Light grey background for secondary boxes */
-    padding: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 250px;
+    max-width: 300px; /* Adjusted for better fit */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -81,13 +95,13 @@ main {
 }
 
 .clock-box h3 {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Adjusted size for better readability */
     margin-bottom: 10px;
     color: #007BFF;
 }
 
 .clock-box div {
-    font-size: 1.5em;
+    font-size: 1.3em; /* Adjusted size for better readability */
     font-weight: bold;
     color: #333;
 }
@@ -102,13 +116,24 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search-bar {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
     .primary-clock {
-        font-size: 2.5em;
+        font-size: 2em; /* Adjusted for better readability */
     }
 
     .clock-box {
-        max-width: 90%; /* Adjusted for better fit on smaller screens */
-        padding: 15px;
+        max-width: 90%; /* Adjusted to fit smaller screens */
+        padding: 10px;
     }
 
     .clock-box h3 {
@@ -116,22 +141,26 @@ footer {
     }
 
     .clock-box div {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Adjusted size for better scaling */
+    }
+
     h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .primary-clock {
-        font-size: 2em;
+        font-size: 1.8em; /* Adjusted for better readability */
     }
 
     .clock-box {
-        max-width: 100%;
-        padding: 10px;
+        max-width: 100%; /* Full width for very small screens */
+        padding: 8px;
     }
 
     .clock-box h3 {
