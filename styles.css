@@ -19,25 +19,26 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center header content */
     align-items: center;
-    flex-wrap: wrap; /* Allow header items to wrap */
+    flex-direction: column; /* Stack items vertically */
 }
 
 h1 {
     margin: 0;
-    font-size: 1.5em; /* Adjusted for better scaling */
+    font-size: 1.5em;
 }
 
 #search-bar {
-    padding: 8px;
+    margin-top: 10px; /* Space above the search bar */
+    padding: 10px;
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    max-width: 90%;
+    width: 100%; /* Full width for mobile */
+    max-width: 300px; /* Max width for larger screens */
     font-size: 1em;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box;
 }
 
 /* Main layout */
@@ -53,6 +54,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     max-width: 90%;
+    text-align: center;
 }
 
 .primary-clock {
@@ -74,7 +76,7 @@ main {
 
 .clock-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px; /* Reduced gap for better fit */
     justify-items: center;
     padding: 20px;
@@ -87,7 +89,7 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Responsive max-width */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -119,27 +121,17 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #search-bar {
-        width: 150px;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: stretch;
+        padding: 15px 10px;
+        flex-direction: column; /* Stack items vertically */
     }
 
     #search-bar {
         width: 100%;
-        margin-top: 10px;
+        max-width: 300px;
     }
+}
 
+@media (max-width: 768px) {
     main {
         padding: 80px 10px 20px; /* Reduced padding for smaller screens */
     }
