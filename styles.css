@@ -11,7 +11,7 @@ body {
 header {
     background-color: #007BFF;
     color: white;
-    padding: 15px 10px; /* Adjusted padding */
+    padding: 15px 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow header items to wrap */
 }
 
 h1 {
@@ -36,11 +37,12 @@ h1 {
     width: 200px;
     max-width: 90%;
     font-size: 1em;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Main layout */
 main {
-    padding: 80px 20px 20px; /* Padding adjusted to account for fixed header */
+    padding: 80px 20px 20px; /* Adjusted padding to account for fixed header */
 }
 
 /* Primary Time (India) */
@@ -50,11 +52,11 @@ main {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 90%; /* Adjusted for better responsiveness */
+    max-width: 90%;
 }
 
 .primary-clock {
-    font-size: 2.5em; /* Adjusted for readability */
+    font-size: 2.5em;
     margin-top: 20px;
     color: #007BFF;
     font-weight: bold;
@@ -74,6 +76,8 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for responsiveness */
     gap: 20px; /* Reduced gap for better fit */
+    justify-items: center;
+    padding: 20px;
 }
 
 .clock-box {
@@ -83,7 +87,7 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 300px; /* Adjusted for better fit */
+    max-width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -93,13 +97,13 @@ main {
 }
 
 .clock-box h3 {
-    font-size: 1.1em; /* Adjusted size for readability */
+    font-size: 1.1em;
     margin-bottom: 10px;
     color: #007BFF;
 }
 
 .clock-box div {
-    font-size: 1.3em; /* Adjusted size for readability */
+    font-size: 1.3em;
     font-weight: bold;
     color: #333;
 }
@@ -136,16 +140,20 @@ footer {
         margin-top: 10px;
     }
 
+    main {
+        padding: 80px 10px 20px; /* Reduced padding for smaller screens */
+    }
+
     .primary-clock {
         font-size: 2em; /* Adjusted for better readability */
     }
 
     .clock-grid {
-        gap: 15px; /* Adjusted gap for better fit */
+        gap: 15px; /* Reduced gap for better fit */
     }
 
     .clock-box {
-        max-width: 90%; /* Adjusted to fit smaller screens */
+        max-width: 100%; /* Full width for very small screens */
         padding: 10px;
     }
 
